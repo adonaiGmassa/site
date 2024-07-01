@@ -1,0 +1,408 @@
+body {
+    font-family: Arial, sans-serif; /* Définit la police de caractères pour tout le document */
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Applique le box-sizing pour inclure les bordures et les paddings dans les dimensions */
+    height: 99vh; /* Ajouté pour que le body prenne toute la hauteur de l'écran */
+    display: flex; /* Utilise flexbox pour la mise en page */
+    flex-direction: column; /* Les enfants du body seront disposés en colonne */
+    cursor: pointer;
+}
+
+a { text-decoration: none; }
+
+li { list-style: none; }
+
+img, ion-icon, a, button, time, span { display: block; }
+
+
+
+header {
+    position: relative; /* Définit la position comme relative pour des ajustements de positionnement */
+    width: 100%; /* Occupe toute la largeur */
+    z-index: 10; /* Assure que le header est au-dessus des autres éléments si ils se chevauchent */
+}
+
+.content {
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    gap: 10px; /* Espace entre la sidebar et le contenu principal */
+    flex: 1; /* Permet à .content de prendre tout l'espace restant */
+    height: calc(100vh - 50px); /* Ajuste la hauteur en fonction de la taille du header */
+}
+/* Styles généraux pour la sidebar */
+.sidebar {
+    font-size: 1rem; /* Taille de police */
+    background-color: #f4f4f4; /* Couleur de fond */
+    padding: 20px; /* Padding autour du contenu */
+    border: 2px solid #ccc; /* Bordure */
+    overflow-y: auto; /* Barre de défilement verticale si nécessaire */
+    width: 250px; /* Largeur de la sidebar */
+    height: 95%S; /* Hauteur de la sidebar */
+    border-radius: 10px; /* Coins arrondis */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour l'effet */
+    display: flex; /* Flexbox pour le layout interne */
+    flex-direction: column; /* Disposition en colonne des éléments */
+}
+.info-bar {
+    text-align: center; /* Centrer le texte */
+    margin-bottom: 10px; /* Marge en bas pour espacer les éléments */
+}
+.avatar-box {
+    display: flex; /* Flexbox pour l'avatar */
+    justify-content: center; /* Centrer l'avatar horizontalement */
+    margin-bottom: 10px; /* Marge en bas pour espacer */
+}
+.avatar-box img {
+    border-radius: 70%; /* Image en forme de cercle */
+    width: 80px; /* Largeur de l'image */
+    height: 80px; /* Hauteur de l'image */
+}
+.info-content {
+    text-align: center; /* Centrer le texte */
+}
+.nom {
+    font-size: 1.2rem; /* Taille de la police du nom */
+    margin: 5px 0; /* Marge autour du nom */
+}
+.title {
+    font-size: 1rem; /* Taille de la police du titre */
+    color: #667; /* Couleur du texte du titre */
+}
+.info_more-btn {
+    background: none; /* Pas de fond */
+    border: none; /* Pas de bordure */
+    color: #007bff; /* Couleur du texte du bouton */
+    cursor: pointer; /* Curseur en forme de main */
+    display: none; 
+    align-items: center; /* Aligner les éléments au centre */
+    margin-top: 10px; /* Marge en haut */
+}
+.info_more-btn span {
+    margin-right: 5px; /* Marge à droite de l'icône */
+}
+.info {
+    flex: 1; /* Permet à cette section de prendre tout l'espace disponible */
+}
+.separateur {
+    height: 1px; /* Hauteur de la ligne */
+    background-color: #ccc; /* Couleur de la ligne */
+    margin: 20px 0; /* Marge verticale */
+}
+.info-list,.RSlist {
+    list-style: none; /* Pas de puces */
+    padding: 0; /* Pas de padding */
+    margin: 0px; /* Pas de marge */
+}
+.RSlist {
+    display: flex; /* Utilise Flexbox pour aligner les éléments en ligne */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 15px; /* Ajoute un espace entre les éléments */
+}
+
+.info-contenu {
+    display: flex; /* Flexbox pour les items de contenu */
+    align-items: center; /* Aligner les items au centre */
+    margin-bottom: 10px; /* Marge en bas des items */
+}
+
+.icone-box {
+    width: 30px; /* Largeur de la boîte d'icône */
+    height: 30px; /* Hauteur de la boîte d'icône */
+    display: flex; /* Flexbox pour l'icône */
+    justify-content: center; /* Centrer l'icône horizontalement */
+    align-items: center; /* Centrer l'icône verticalement */
+    margin-right: 10px; /* Marge à droite */
+    font-size: 1.2rem; /* Taille de l'icône */
+    color: #007bff; /* Couleur de l'icône */
+}
+
+.info-txt {
+    flex: 1; /* Permet au texte de prendre tout l'espace disponible */
+}
+
+.info-titre {
+    font-weight: bold; /* Texte en gras */
+    margin: 0; /* Pas de marge */
+}
+.reseauSociaux {
+    margin-right: 15px; /* Marge à droite */
+}
+.social-link {
+    color: #007bff; /* Couleur des icônes de réseaux sociaux */
+    font-size: 2rem; /* Taille des icônes de réseaux sociaux */
+    text-decoration: none; /* Pas de décoration de texte */
+    display: flex; /* Utilise Flexbox pour aligner les éléments en ligne */
+    align-items: center; /* Centre les éléments verticalement */
+    justify-content: center; /* Centre les éléments horizontalement */
+}
+.main-content {
+    font-size: 2rem; /* Définit une grande taille de police pour le contenu principal */
+    background-color: gray; /* Définit une couleur de fond grise */
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    flex-direction: column; /* Disposition en colonne des enfants */
+    padding: 5px 10px; /* Ajoute un padding autour du contenu */
+    border: 2px outset black; /* Ajoute une bordure en relief */
+    
+    width: calc(99% - 220px); /* Prend le reste de l'espace moins la largeur de la sidebar et le gap */
+    height: 99%; /* Prend toute la hauteur de .content */
+}
+
+.navbar {
+    position: absolute; /* Positionne la navbar de manière absolue par rapport à son parent */
+    padding: 5px; /* Ajoute un padding autour du contenu de la navbar */
+    resize: none; /* Empêche le redimensionnement */
+    overflow: hidden; /* Masque le débordement */
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    width: 100%; /* Occupe toute la largeur disponible */
+    box-sizing: border-box; /* Inclut les bordures et les paddings dans les dimensions */
+    background-color: #333; /* Définit une couleur de fond foncée */
+    z-index: 10; /* Assure que la navbar est au-dessus des autres éléments si ils se chevauchent */
+}
+
+.navbar-list ul {
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    list-style-type: none; /* enlève les points devant les noms */
+    justify-content: space-evenly; /* Distribue les éléments de manière égale */
+    padding: 0; /* Supprime le padding par défaut */
+    margin: 0; /* Supprime la marge par défaut */
+    width: 100%; /* Occupe toute la largeur disponible */
+}
+
+.navbar-link {
+    color: white; /* Définit la couleur du texte en blanc */
+    text-decoration: none; /* Supprime la décoration de texte */
+    margin: 0 1em; /* Ajoute une marge horizontale */
+}
+
+.navbar-link:hover {
+    text-decoration: underline; /* Souligne le texte au survol */
+}
+
+.navbar-list ul li {
+    margin: 15px; /* Ajoute une marge autour des éléments de la liste */
+}
+
+.page {
+    font-size: 2rem; /* Définit une grande taille de police pour le texte de la page */
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    flex-direction: column; /* Disposition en colonne des enfants */
+    background-color: gray; /* Définit une couleur de fond grise */
+    padding: 5px 5px; /* Ajoute un padding autour du contenu */
+    border: 2px hidden black; /* Ajoute une bordure cachée */
+    /* overflow: hidden;  Cache tout contenu qui déborde */
+    overflow-x: auto; /* Permet le défilement horizontal si le contenu dépasse la largeur du conteneur */
+    margin-top: 60px;/* Ajuste la position sous la navbar */
+    width:76vw; /* Occupe 90% de la largeur disponible */
+    height: 95%; /* Prend toute la hauteur disponible */
+    scroll-behavior: smooth; /* Active le défilement fluide pour une meilleure expérience utilisateur */
+    overscroll-behavior-inline: contain; /* Contient le comportement de défilement à l'intérieur du conteneur pour éviter les débordements */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    z-index: 20;
+    scroll-snap-type: inline mandatory; /* Active l'accrochage du défilement en ligne droite avec des points d'accrochage obligatoires */
+}
+
+/* Afficher les articles actifs avec une animation */
+.page article.active { /* Sélectionne les éléments article avec la classe 'active' */
+    display: block; /* Change l'affichage à 'block' pour les rendre visibles */
+    animation: fade 0.5s ease backwards; /* Applique une animation de fondu sur 0.5 secondes */
+}
+/* Cacher les articles par défaut */
+article { 
+    display: none;
+}
+
+.section {
+    margin-bottom: 2em; /* Ajoute une marge en bas pour espacer les sections */
+}
+
+.skills-list {
+    list-style: none;
+    padding: 0;
+}
+
+.skills-item {
+    display: none;
+    margin-bottom: 20px;
+}
+
+.skills-item.active {
+    display: block;
+}
+
+.skills {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skills-item ul {
+    list-style: disc;
+    padding-left: 20px;
+}
+.project {
+    background-color: #e7e7e7; /* Définit une couleur de fond claire */
+    margin: 1em 0; /* Ajoute une marge verticale entre les projets */
+    padding: 1em; /* Ajoute un padding autour du contenu */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+}
+.filter-list {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filter-item button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 14px;
+}
+
+.filter-item button.active {
+    background-color: #0056b3;
+}
+
+.filter-select-box {
+    display: none;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+.filter-select {
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.select-value {
+    margin-right: 10px;
+}
+
+.select-list {
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.select-list.active {
+    display: block;
+}
+
+.select-item button {
+    padding: 10px 15px;
+    border: none;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+}
+
+.select-item button:hover {
+    background-color: #f5f5f5;
+}
+
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-item {
+    display: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+.project-item.active {
+    display: block;
+}
+.project-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.project-item-icon-box {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 5px;
+    color: #fff;
+}
+
+.project-title {
+    padding: 10px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.project-category {
+    padding: 0 10px 10px;
+    color: #555;
+}
+
+/* Animation pour l'apparition des articles */
+@keyframes fade { /* Définition de l'animation nommée 'fade' */
+    0% { /* Début de l'animation */
+        opacity: 0; /* Opacité initiale à 0, rendant l'élément transparent */
+    }
+    100% { /* Fin de l'animation */
+        opacity: 1; /* Opacité finale à 1, rendant l'élément complètement visible */
+    }
+}
+  
+
+
+form {
+    display: flex; /* Utilise flexbox pour la mise en page interne */
+    flex-direction: column; /* Disposition en colonne des enfants */
+}
+
+form label {
+    margin: 0.5em 0 0.2em; /* Ajoute une marge autour des étiquettes */
+}
+
+form input, form textarea, form button {
+    padding: 0.5em; /* Ajoute un padding autour des éléments de formulaire */
+    margin-bottom: 1em; /* Ajoute une marge en bas des éléments de formulaire */
+    border: 1px solid #ccc; /* Ajoute une bordure grise claire */
+    border-radius: 5px; /* Ajoute des coins arrondis */
+}
+
+form button {
+    background-color: #333; /* Définit une couleur de fond foncée pour le bouton */
+    color: white; /* Définit la couleur du texte en blanc */
+    border: none; /* Supprime la bordure par défaut */
+    cursor: pointer; /* Change le curseur en pointeur */
+}
+
+form button:hover {
+    background-color: #555; /* Change la couleur de fond au survol */
+}
+
+.footer a {
+    color: rgb(73, 19, 189); /* Couleur des liens */
+    text-decoration: none; /* Supprime la décoration des liens */
+}
+
+.footer a:hover {
+    text-decoration: underline; /* Ajoute une décoration au survol des liens */
+}

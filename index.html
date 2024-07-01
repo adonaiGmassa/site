@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio d'Adonaï</title><!-- Titre de la page -->
+        <!-- Description du site  -->
+        <meta name="description" content="Ceci est mon portfolio étudiant"/>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <!--link rel="stylesheet" href="css/stylePage.css" type="text/css"-->
+    </head>
+
+    <body>
+        <div class="content">
+            <!-- Barre latérale pour les informations de l'utilisateur -->
+            <aside class="sidebar" data-sidebar>
+                <div class="info-bar">
+                    <figure class="avatar-box">
+                        <img src="img/moi.PNG" alt="Richard hanrick" width="80">
+                    </figure>
+                    <div class="info-content">
+                        <h1 class="nom" title="Massa Adonaï">Massa Adonaï</h1>
+                        <p class="title">Web developer</p>
+                    </div>
+                    <button class="info_more-btn" data-sidebar-btn>
+                        <span>Plus d'info</span>
+                        <ion-icon name="chevron-down"></ion-icon>
+                    </button>
+                </div>
+        
+                <div class="info">
+                    <div class="separateur"></div>
+                    <ul class="info-list">
+                        <li class="info-contenu">
+                            <div class="icone-box">
+                                <ion-icon name="calendar-outline"></ion-icon>
+                            </div>
+                            <div class="info-txt">
+                                <p class="info-titre">Birthday</p>
+                                <time datetime="2005-10-30">30 Octobre 2005</time>
+                            </div>
+                        </li>
+                        <li class="info-contenu">
+                            <div class="icone-box">
+                                <ion-icon name="location-outline"></ion-icon>
+                            </div>
+                            <div class="info-txt">
+                                <p class="info-titre">Localisation</p>
+                                <address>Angers,France</address>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="separateur"></div>
+                    <ul class="RSlist">
+                        <li class="reseauSociaux">
+                            <a href="https://github.com/adonaiGmassa" class="social-link">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://fr.linkedin.com/in/adona%C3%AF-massa-5181032bb" class="social-link">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a>
+                        </li>
+                        <li class="social-item">
+                    </ul>
+                </div>
+                <!-- footer -->
+                <div class="footer">
+                    <div class="separateur"></div>
+                    <div class="footer-G">
+                        <p>&copy; 2024 Massa Adonaï. Tous droits réservés.</p>
+                    </div>
+                    <div class="footer-D">
+                        <ul>
+                            <li><a href="page/Plan_de_site.html">Plan de site</a></li>
+                            <li><a href="page/Confidentialite.html">Politique de confidencielite</a></li>
+                            <li><a href="page/MentionLegal.html">Mention legal</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Contenu de la page de droite -->
+            <main class="main-content">
+                <header>
+                    <!-- Barre de navigation -->
+                    <nav class="navbar">
+                        <!-- Liste des éléments de navigation -->
+                        <div class="navbar-list">
+                            <ul class="navbar-list">
+                                <li><a data-page="about" class="navbar-link">À propos</a></li>
+                                <li><a data-page="skills" class="navbar-link">Compétences</a></li>
+                                <li><a data-page="projects" class="navbar-link">Projets</a></li>
+                                <li><a data-page="contact" class="navbar-link">Contact</a></li>
+                            </ul>
+                        </div>
+                       
+                    </nav>
+                </header>
+                <div class="separateur"><hr></div>
+                <div class="page">
+                    <article class="active"  data-page="about">
+                        <section id="about" class="section">
+                            <h2>À propos de moi</h2>
+                            <p>
+                            Je suis un développeur junior passionné par le développement web 
+                            et toujours prêt à apprendre de nouvelles technologies.
+    
+    
+    
+    
+    
+                            </p>
+                        </section>
+                    </article>
+                    
+                    <article class="active" data-page="skills">
+                        <section id="skills" class="section">
+                            <h2>Compétences</h2>
+                            <ul class="filter-list">
+                                <li class="filter-item">
+                                    <button data-filter-btn="Organisation">Organisation</button>
+                                </li>
+                                <li class="filter-item">
+                                    <button data-filter-btn="Langage de programmation">Langage de programmation</button>
+                                </li>
+                                <li class="filter-item">
+                                    <button data-filter-btn="Cybersécurité">Cybersécurité</button>
+                                </li>
+                                <li class="filter-item">
+                                    <button data-filter-btn="Planification">Planification</button>
+                                </li>
+                            </ul>
+                            <ul class="skills-list">
+                                <li class="skills-item" data-filter-item data-category="Langage de programmation">
+                                    <p class="skills">Langage de programmation</p>
+                                    <ul>
+                                        <li>HTML</li>
+                                        <li>CSS</li>
+                                        <li>JavaScript</li>
+                                        <li>Python</li>
+                                        <li>Java</li>
+                                    </ul>
+                                </li>
+                                <li class="skills-item" data-filter-item data-category="Cybersécurité">
+                                    <p class="skills">Cybersécurité</p>
+                                    <ul>
+                                        <li>Gestion des Mises à Jour</li>
+                                        <li>Sécurité des Accès</li>
+                                        <li>Protection contre les Attaques par Injection</li>
+                                        <li>Sauvegardes Régulières et Restaurations</li>
+                                        <li>Analyser les Journaux de Sécurité</li>
+                                        
+                                    </ul>
+                                </li>
+                                <li class="skills-item" data-filter-item data-category="Organisation">
+                                    <p class="skills">Organisation</p>
+                                    <ul>
+                                        <li>gestion du temps </li>
+                                        <li>Communication avec le clients </li>
+                                        <li>plannigs de taches </li>
+                                        <li>Resource Allocation</li>
+                                        <li>Team Leadership</li>
+                                    </ul>
+                                </li>
+                                <li class="skills-item" data-filter-item data-category="Planification">
+                                    <p class="skills">Planification</p>
+                                    <ul>
+                                        <li>Strategic Planning</li>
+                                        <li>Budget Planning</li>
+                                        <li>Risk Management</li>
+                                        <li>Milestone Tracking</li>
+                                        <li>Capacity Planning</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            
+                        </section>
+                    </article>
+                    
+
+                    <article class="active" data-page="projects">
+                        <section id="projects" class="section">
+                            <h2>Projets</h2>
+                            <div class="project">
+                                <h3>Projet de stage</h3>
+                                <ul class="filter-list">
+                                    <li class="filter-item">
+                                        <button class="active" data-filter-btn>Tous</button>
+                                    </li>
+                                    <li class="filter-item">
+                                        <button data-filter-btn>Stage</button>
+                                    </li>
+                                    <li class="filter-item">
+                                        <button data-filter-btn>Applications</button>
+                                    </li>
+                                    <li class="filter-item">
+                                        <button data-filter-btn>Development Web</button>
+                                    </li>
+                                </ul>
+                                <div class="filter-select-box">
+                                    <button class="filter-select" data-select>
+                                        <div class="select-value" data-selecct-value>Montres les categories</div>
+                                        <div class="select-icon">
+                                            <ion-icon name="chevron-down"></ion-icon>
+                                        </div>
+                                    </button>
+                                        <ul class="select-list">
+                                            <li class="select-item">
+                                                <button data-select-item>All</button>
+                                            </li>
+                                            <li class="select-item">
+                                                <button data-select-item>Stage</button>
+                                            </li>
+                                            <li class="select-item">
+                                                <button data-select-item>Applications</button>
+                                            </li>
+                                            <li class="select-item">
+                                                <button data-select-item>Development Web</button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <ul class="project-list">
+                                        <li class="project-item active" data-filter-item data-category="Stage">
+                                            <a href="page/stage.html">
+                                                <figure class="project-img">
+                                                    <div class="project-item-icon-box">
+                                                        <ion-icon name="eye-outline"></ion-icon>
+                                                    </div>
+                                                    <img src="img/logo amc.png" alt="AMC Productions" loading="lazy">
+                                                </figure>
+                                                <h3 class="project-title">AMC Productions</h3>
+                                                <p class="project-category">Stage</p>
+                                            </a>
+                                        </li>
+                                        <li class="project-item active" data-filter-item data-category="Development Web">
+                                            <a href="#">
+                                                <figure class="project-img">
+                                                    <div class="project-item-icon-box">
+                                                        <ion-icon name="eye-outline"></ion-icon>
+                                                    </div>
+                                                    
+                                                </figure>
+                                                <h3 class="project-title"></h3>
+                                                <p class="project-category">Development Web</p>
+                                            </a>
+                                        </li>
+                                        <li class="project-item active" data-filter-item data-category="Development Web">
+                                            <a href="#">
+                                                <figure class="project-img">
+                                                    <div class="project-item-icon-box">
+                                                        <ion-icon name="eye-outline"></ion-icon>
+                                                    </div>
+                                                    <img src="" alt="" loading="lazy">
+                                                </figure>
+                                                <h3 class="project-title"></h3>
+                                                <p class="project-category">Development Web</p>
+                                            </a>
+                                        </li>
+                                        
+                                        <li class="project-item active" data-filter-item data-category="applications">
+                                            <a href="#">
+                                                <figure class="project-img">
+                                                    <div class="project-item-icon-box">
+                                                        <ion-icon name="eye-outline"></ion-icon>
+                                                    </div>
+                                                    <img src="" alt="" loading="lazy">
+                                                </figure>
+                                                <h3 class="project-title"></h3>
+                                                <p class="project-category">Applications</p>
+                                            </a>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                        </section>
+                    </article>
+                    
+
+                    <article class="active" data-page="contact">
+                        <section id="contact" class="section">
+                            <h2>Contacte moi</h2>
+                            <form id="contact-form">
+                                <label for="name">Nom :</label>
+                                <input type="text" id="name" name="name" required>
+                                <label for="email">Email :</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="message">Message :</label>
+                                <textarea id="message" name="message" required></textarea>
+                                <button type="submit">Envoyer</button>
+                            </form>
+                        </section>
+                    </article>
+                    
+                </div>
+            </main>
+        </div>
+
+        <!-- footer -->
+        
+    </body>
+    <!-- Inclusion du fichier JavaScript -->
+    <script src="js/App.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
