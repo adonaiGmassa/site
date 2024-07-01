@@ -88,7 +88,60 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   });
 });
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('[data-filter-btn]');
+  const filterItems = document.querySelectorAll('[data-filter-item]');
+  const selectButton = document.querySelector('[data-select]');
+  const selectList = document.querySelector('.select-list');
+  const selectItems = document.querySelectorAll('[data-select-item]');
+  const selectValue = document.querySelector('[data-select-value]');
 
+  filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+          const filter = button.textContent.trim();
+
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+
+          filterItems.forEach(item => {
+              const category = item.getAttribute('data-category').trim();
+              if (filter === 'Tous' || filter === category) {
+                  item.classList.add('active');
+              } else {
+                  item.classList.remove('active');
+              }
+          });
+      });
+  });
+
+  selectButton.addEventListener('click', () => {
+      selectList.classList.toggle('active');
+  });
+
+  selectItems.forEach(item => {
+      item.addEventListener('click', () => {
+          const filter = item.textContent.trim();
+          selectValue.textContent = filter;
+
+          selectList.classList.remove('active');
+
+          filterItems.forEach(filterItem => {
+              const category = filterItem.getAttribute('data-category').trim();
+              if (filter === 'All' || filter === category) {
+                  filterItem.classList.add('active');
+              } else {
+                  filterItem.classList.remove('active');
+              }
+          });
+      });
+  });
+
+  document.addEventListener('click', (e) => {
+      if (!selectButton.contains(e.target) && !selectList.contains(e.target)) {
+          selectList.classList.remove('active');
+      }
+  });
+});
 
 
 
